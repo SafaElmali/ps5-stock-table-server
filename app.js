@@ -41,6 +41,7 @@ const getVatanData = (vatanUrl) => {
                     const $ = res.$;
                     const productInfo = $(".product-list__product-name").text().trim();
                     const stockBtn = $(".btn-stock").text().trim();
+                    console.log(stockBtn);
                     var status = 0;
                     var isDigital = 0;
 
@@ -76,6 +77,8 @@ const getTeknosaData = (teknosaUrl) => {
                     const $ = res.$;
                     const productInfo = $(".product-title").text().trim();
                     const stockBtn = $("#productOutOfStockFromAll").text().trim();
+                    console.log(stockBtn);
+
                     var status = 0;
                     var isDigital = 0;
 
@@ -109,6 +112,8 @@ const getMediamarktData = (mediaMarktUrl) => {
                     const $ = res.$;
                     const productInfo = $("h1[itemprop]").text().trim();
                     const stockBtn = $(".offline-text").text().trim();
+                    console.log(stockBtn);
+
                     var status = 0;
                     var isDigital = 0;
 
@@ -145,6 +150,6 @@ function ResponseModel(productInfo, site, status, link, isDigital) {
     this.isDigital = isDigital;
 }
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Stock Server listening at http://localhost:${port}`)
 })
