@@ -41,6 +41,7 @@ const getVatanData = (vatanUrl) => {
                     const $ = res.$;
                     const productInfo = $(".product-list__product-name").text().trim();
                     const stockBtn = $(".btn-stock").text().trim();
+                    console.log(stockBtn);
                     var status = 0;
                     var isDigital = 0;
 
