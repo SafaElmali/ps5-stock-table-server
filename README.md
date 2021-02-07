@@ -14,3 +14,7 @@
 ## How To Run The Project
 
 - In theroot folder run ```node index.js```
+
+## License
+
+ps5-stock-table-server is [MIT licensed](./LICENSE).
