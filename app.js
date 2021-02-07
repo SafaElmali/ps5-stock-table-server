@@ -145,6 +145,6 @@ function ResponseModel(productInfo, site, status, link, isDigital) {
     this.isDigital = isDigital;
 }
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Stock Server listening at http://localhost:${port}`)
 })
