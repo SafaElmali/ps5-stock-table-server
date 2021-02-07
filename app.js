@@ -77,6 +77,8 @@ const getTeknosaData = (teknosaUrl) => {
                     const $ = res.$;
                     const productInfo = $(".product-title").text().trim();
                     const stockBtn = $("#productOutOfStockFromAll").text().trim();
+                    console.log(stockBtn);
+
                     var status = 0;
                     var isDigital = 0;
 
@@ -110,6 +112,8 @@ const getMediamarktData = (mediaMarktUrl) => {
                     const $ = res.$;
                     const productInfo = $("h1[itemprop]").text().trim();
                     const stockBtn = $(".offline-text").text().trim();
+                    console.log(stockBtn);
+
                     var status = 0;
                     var isDigital = 0;
 
