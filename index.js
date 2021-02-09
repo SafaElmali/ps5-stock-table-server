@@ -5,9 +5,10 @@ const cors = require('cors')
 app.use(cors());
 
 const port = 4000;
-const resList = [];
 
 app.get('/stocks', async (req, res) => {
+    const resList = [];
+
     const vatanBlueRay = await getVatanData("https://www.vatanbilgisayar.com/sony-playstation-5-oyun-konsolu.html");
     const vatanDigital = await getVatanData("https://www.vatanbilgisayar.com/sony-playstation-5-digital-surum-oyun-konsolu.html");
     resList.push(vatanBlueRay);
@@ -20,7 +21,6 @@ app.get('/stocks', async (req, res) => {
     resList.push(mediamarktData);
 
     const result = prepareResult(resList);
-    resList = [];
 
     res.send(JSON.parse(result));
 })
