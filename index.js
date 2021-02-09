@@ -4,7 +4,7 @@ const Crawler = require("crawler");
 const cors = require('cors')
 app.use(cors());
 
-const port = 3000;
+const port = 4000;
 const resList = [];
 
 app.get('/stocks', async (req, res) => {
