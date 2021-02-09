@@ -43,7 +43,9 @@ const getVatanData = (vatanUrl) => {
                     const stockBtn = $(".btn-stock").text().trim();
                     var status = 0;
                     var isDigital = 0;
-
+                    console.log("VATAN")
+                    console.log(stockBtn)
+                    console.log(status)
                     if (stockBtn.includes("SEPETE EKLE")) {
                         status = 2;
                     } else if (stockBtn.includes("ÇOK YAKINDA")) {
@@ -78,7 +80,9 @@ const getTeknosaData = (teknosaUrl) => {
                     const stockBtn = $("#productOutOfStockFromAll").text().trim();
                     var status = 0;
                     var isDigital = 0;
-
+                    console.log("TEKNOSA")
+                    console.log(stockBtn)
+                    console.log(status)
                     if (!stockBtn) {
                         status = 2;
                     }
@@ -111,6 +115,10 @@ const getMediamarktData = (mediaMarktUrl) => {
                     const stockBtn = $(".offline-text").text().trim();
                     var status = 0;
                     var isDigital = 0;
+
+                    console.log("MEDİA")
+                    console.log(stockBtn)
+                    console.log(status)
 
                     if (!stockBtn) {
                         status = 2;
