@@ -13,7 +13,7 @@
 
 ## How To Run The Project
 
-- In theroot folder run ```node index.js```
+- In the root folder run ```node index.js```
 
 ## License
 
